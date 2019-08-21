@@ -162,6 +162,7 @@ void PReLUPlugin::serialize(void *buffer)
     assert(d == a + getSerializationSize());
 }
 
+#if 0
 const char *PReLUPlugin::getPluginType() const
 {
     return "PReLUPlugin_TRT";
@@ -178,6 +179,8 @@ IPluginExt *PReLUPlugin::clone() const
 {
     return new PReLUPlugin(&mWeights, 1);
 }
+
+#endif
 
 size_t PReLUPlugin::type2size(DataType type) { return type == DataType::kFLOAT ? sizeof(float) : sizeof(__half); }
 

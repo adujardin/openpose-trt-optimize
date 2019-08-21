@@ -42,6 +42,7 @@ public:
 
     virtual void serialize(void* buffer) override;
 
+#if 0
     const char* getPluginType() const override;
     
     const char* getPluginVersion() const override;
@@ -49,7 +50,8 @@ public:
     void destroy();
     
     IPluginExt* clone() const override;
-    
+#endif
+
 private:
     size_t type2size(DataType type);
 
